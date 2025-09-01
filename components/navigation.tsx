@@ -103,32 +103,58 @@ export function Navigation() {
               </div>
             </div>
 
-            {/* Premium CTA Button */}
+            {/* Sophisticated Premium CTA Button */}
             <div className="hidden lg:block">
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-skillshift-cyan to-skillshift-orange rounded-2xl blur opacity-30 group-hover:opacity-60 transition-all duration-500"></div>
-                <Button className="relative bg-gradient-to-r from-skillshift-cyan to-skillshift-orange hover:from-skillshift-orange hover:to-skillshift-cyan text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border-0">
-                  <span className="flex items-center space-x-2">
-                    <span>Join the Movement</span>
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                  </span>
-                </Button>
+                {/* Animated background glow */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-skillshift-cyan via-purple-500 to-skillshift-orange rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-all duration-700 animate-pulse"></div>
+                
+                {/* Main button container */}
+                <div className="relative">
+                  {/* Glass morphism background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-gray-100/30 backdrop-blur-xl rounded-2xl border border-white/30 shadow-2xl"></div>
+                  
+                  {/* Inner gradient border */}
+                  <div className="absolute inset-[1px] bg-gradient-to-r from-skillshift-cyan/10 to-skillshift-orange/10 rounded-2xl"></div>
+                  
+                  <Button className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 hover:from-skillshift-cyan hover:via-purple-600 hover:to-skillshift-orange text-white font-bold px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 border-0 overflow-hidden group">
+                    {/* Shimmer effect */}
+                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 ease-out"></div>
+                    
+                    <span className="relative flex items-center space-x-3">
+                      <span className="text-sm font-extrabold tracking-wide">Join the Movement</span>
+                      <div className="flex space-x-1">
+                        <div className="w-1.5 h-1.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                        <div className="w-1.5 h-1.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                        <div className="w-1.5 h-1.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                      </div>
+                    </span>
+                  </Button>
+                </div>
               </div>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Sophisticated Mobile Menu Button */}
             <div className="lg:hidden">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="relative p-3 text-gray-700 hover:text-skillshift-cyan hover:bg-skillshift-cyan/10 transition-all duration-300 rounded-xl"
-              >
-                <div className="relative w-6 h-6">
-                  <Menu className={`absolute inset-0 w-6 h-6 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0 rotate-180' : 'opacity-100 rotate-0'}`} />
-                  <X className={`absolute inset-0 w-6 h-6 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-180'}`} />
-                </div>
-              </Button>
+              <div className="relative group">
+                {/* Subtle glow effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-skillshift-cyan/30 to-skillshift-orange/30 rounded-xl blur opacity-0 group-hover:opacity-60 transition-all duration-300"></div>
+                
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="relative p-3 bg-white/60 backdrop-blur-md border border-gray-200/50 hover:bg-white/80 hover:border-skillshift-cyan/30 transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl group"
+                >
+                  {/* Button background with subtle gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-gray-50/60 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  <div className="relative w-6 h-6">
+                    <Menu className={`absolute inset-0 w-6 h-6 transition-all duration-300 text-gray-700 group-hover:text-skillshift-cyan ${isMobileMenuOpen ? 'opacity-0 rotate-180 scale-75' : 'opacity-100 rotate-0 scale-100'}`} />
+                    <X className={`absolute inset-0 w-6 h-6 transition-all duration-300 text-gray-700 group-hover:text-skillshift-orange ${isMobileMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-180 scale-75'}`} />
+                  </div>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -166,16 +192,31 @@ export function Navigation() {
                 </button>
               ))}
               
-              {/* Mobile CTA */}
+              {/* Sophisticated Mobile CTA */}
               <div className="pt-4 border-t border-gray-100">
                 <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-skillshift-cyan to-skillshift-orange rounded-2xl blur opacity-30 group-hover:opacity-60 transition-all duration-500"></div>
-                  <Button className="relative w-full bg-gradient-to-r from-skillshift-cyan to-skillshift-orange hover:from-skillshift-orange hover:to-skillshift-cyan text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 border-0">
-                    <span className="flex items-center justify-center space-x-2">
-                      <span>Join the Movement</span>
-                      <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    </span>
-                  </Button>
+                  {/* Animated background glow */}
+                  <div className="absolute -inset-2 bg-gradient-to-r from-skillshift-cyan via-purple-500 to-skillshift-orange rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-all duration-700"></div>
+                  
+                  {/* Main button container */}
+                  <div className="relative">
+                    {/* Glass morphism background */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-gray-100/30 backdrop-blur-xl rounded-2xl border border-white/30 shadow-2xl"></div>
+                    
+                    <Button className="relative w-full bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 hover:from-skillshift-cyan hover:via-purple-600 hover:to-skillshift-orange text-white font-bold py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-500 border-0 overflow-hidden group">
+                      {/* Shimmer effect */}
+                      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 ease-out"></div>
+                      
+                      <span className="relative flex items-center justify-center space-x-3">
+                        <span className="text-sm font-extrabold tracking-wide">Join the Movement</span>
+                        <div className="flex space-x-1">
+                          <div className="w-1.5 h-1.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                          <div className="w-1.5 h-1.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                          <div className="w-1.5 h-1.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                        </div>
+                      </span>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -183,12 +224,13 @@ export function Navigation() {
         </div>
       </nav>
 
-      {/* Scroll Progress Indicator */}
+      {/* Enhanced Scroll Progress Indicator */}
       <div className="fixed top-0 left-0 w-full h-1 z-50 bg-gray-100/20">
         <div 
-          className="h-full bg-gradient-to-r from-skillshift-cyan to-skillshift-orange transition-all duration-300 ease-out"
+          className="h-full bg-gradient-to-r from-skillshift-cyan via-purple-500 to-skillshift-orange transition-all duration-300 ease-out shadow-lg"
           style={{
-            width: `${Math.min(100, (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100)}%`
+            width: `${Math.min(100, (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100)}%`,
+            boxShadow: '0 0 10px rgba(59, 130, 246, 0.5)'
           }}
         ></div>
       </div>
