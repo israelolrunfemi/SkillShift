@@ -1,26 +1,272 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* SkillShift brand colors - Consistent white background throughout */
+  --background: oklch(1 0 0); /* Pure white background */
+  --foreground: oklch(0.145 0.05 240); /* Dark navy #042540 for text */
+  --card: oklch(1 0 0); /* White card backgrounds */
+  --card-foreground: oklch(0.145 0.05 240);
+  --popover: oklch(1 0 0); /* White popover backgrounds */
+  --popover-foreground: oklch(0.145 0.05 240);
+  --primary: oklch(0.7 0.15 200); /* Bright cyan #00D1FF for primary buttons */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(1 0 0); /* White secondary backgrounds */
+  --secondary-foreground: oklch(0.145 0.05 240);
+  --muted: oklch(0.98 0.005 240); /* Very light muted backgrounds */
+  --muted-foreground: oklch(0.556 0.02 240);
+  --accent: oklch(0.65 0.2 25); /* Orange #FF5E34 for accent elements */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.922 0.01 240);
+  --input: oklch(1 0 0); /* White input backgrounds */
+  --ring: oklch(0.7 0.15 200);
+  --chart-1: oklch(0.7 0.15 200);
+  --chart-2: oklch(0.65 0.2 25);
+  --chart-3: oklch(0.145 0.05 240);
+  --chart-4: oklch(0.8 0.1 200);
+  --chart-5: oklch(0.6 0.15 25);
+  --radius: 0.625rem;
+  --sidebar: oklch(1 0 0); /* White sidebar background */
+  --sidebar-foreground: oklch(0.145 0.05 240);
+  --sidebar-primary: oklch(0.7 0.15 200);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(1 0 0); /* White sidebar accent */
+  --sidebar-accent-foreground: oklch(0.145 0.05 240);
+  --sidebar-border: oklch(0.922 0.01 240);
+  --sidebar-ring: oklch(0.7 0.15 200);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  html {
+    /* Ensure HTML element has white background */
+    @apply bg-white;
+  }
+  
+  body {
+    /* Ensuring body always has white background */
+    @apply bg-white text-foreground;
+    /* Prevent any background color inheritance */
+    background-color: #ffffff !important;
+  }
+  
+  /* Ensure all major layout elements have white backgrounds */
+  main, section, article, aside, nav, header, footer {
+    @apply bg-white;
+  }
+  
+  /* Ensure form elements have white backgrounds */
+  input, textarea, select {
+    @apply bg-white;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Updated animations and gradients to work with white background and orange accents */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(0, 209, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 209, 255, 0.6);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Updated gradients for white background with orange accent sections */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #ff5e34 0%, #00d1ff 50%, #042540 100%);
+}
+
+.bg-gradient-orange-accent {
+  background: linear-gradient(135deg, #ff5e34 0%, #ff7a5c 100%);
+}
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, #00d1ff 0%, #042540 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-secondary {
+  background: linear-gradient(135deg, #ff5e34 0%, #00d1ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Updated card and button styles for white background theme */
+.card-premium {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 209, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(4, 37, 64, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-premium:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 209, 255, 0.2);
+  border-color: rgba(0, 209, 255, 0.4);
+}
+
+.card-orange-accent {
+  background: linear-gradient(135deg, #ff5e34 0%, #ff7a5c 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 10px 30px rgba(255, 94, 52, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-orange-accent:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(255, 94, 52, 0.4);
+}
+
+.btn-premium {
+  background: linear-gradient(135deg, #00d1ff 0%, #0099cc 100%);
+  box-shadow: 0 8px 25px rgba(0, 209, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: white;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(0, 209, 255, 0.4);
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, #ff5e34 0%, #e54d2e 100%);
+  box-shadow: 0 8px 25px rgba(255, 94, 52, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: white;
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(255, 94, 52, 0.4);
+}
+
+.btn-navy {
+  background: linear-gradient(135deg, #042540 0%, #063a5c 100%);
+  box-shadow: 0 8px 25px rgba(4, 37, 64, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: white;
+}
+
+.btn-navy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(4, 37, 64, 0.4);
+}
+
+/* Updated color utilities to match exact brand colors */
+.bg-skillshift-navy {
+  background-color: #042540;
+}
+.bg-skillshift-cyan {
+  background-color: #00d1ff;
+}
+.bg-skillshift-orange {
+  background-color: #ff5e34;
+}
+.text-skillshift-navy {
+  color: #042540;
+}
+.text-skillshift-cyan {
+  color: #00d1ff;
+}
+.text-skillshift-orange {
+  color: #ff5e34;
+}
+.border-skillshift-cyan {
+  border-color: #00d1ff;
+}
+.border-skillshift-orange {
+  border-color: #ff5e34;
+}
+.border-skillshift-navy {
+  border-color: #042540;
+}
+
+/* Added section background utilities for orange accent sections */
+.section-orange-accent {
+  background: linear-gradient(135deg, #ff5e34 0%, #ff7a5c 100%);
+  color: white;
+}
+
+.section-white {
+  background: #ffffff;
+  color: #042540;
+}
+
+/* Additional utility classes for ensuring white backgrounds */
+.bg-white-important {
+  background-color: #ffffff !important;
+}
+
+.bg-white-force {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
 }
