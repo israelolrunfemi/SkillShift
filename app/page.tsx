@@ -64,7 +64,7 @@ const SponsorshipSection = dynamic(() => import("@/components/sponsorship-sectio
   )
 })
 
-const TestimonialsSection = dynamic(() => import("@/components/testimonials-section").then(mod => ({ default: mod.TestimonialsSection })), {
+const MeetTeamSection = dynamic(() => import("@/components/team-section").then(mod => ({ default: mod.MeetTeamSection })), {
   ssr: false,
   loading: () => (
     <section className="py-24 bg-white">
@@ -144,7 +144,7 @@ export default function HomePage() {
           <div className="text-center animate-pulse text-xl text-gray-400">Loading Testimonials...</div>
         </section>
       }>
-        <TestimonialsSection />
+        <MeetTeamSection />
       </Suspense>
       
       <Suspense fallback={

@@ -52,7 +52,7 @@ export function Navigation() {
   const navItems = [
     { label: "About", href: "#about", id: "about" },
     { label: "Sponsors", href: "#sponsors", id: "sponsors" },
-    { label: "Testimonials", href: "#testimonials", id: "testimonials" },
+    { label: "Team", href: "#team", id: "team" },
     { label: "Contact", href: "#contact", id: "contact" },
   ];
 

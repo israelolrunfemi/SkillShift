@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Check, Crown, Award, Star, Heart, Sparkles, TrendingUp, Users, Database, Trophy, Zap, Shield, Diamond, ArrowRight, Gem, Infinity, Target, Download, Phone } from "lucide-react"
 
 export function SponsorshipSection() {
+  
   const sponsorshipTiers = [
     {
       name: "Platinum Elite",
