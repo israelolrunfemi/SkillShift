@@ -5,8 +5,9 @@ import { MapPin, Phone, Mail, Calendar, Linkedin, Twitter, Instagram, Facebook }
 export function Footer() {
   const socialLinks = [
     { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Twitter, href: " https://x.com/globaskillshift?s=21", label: "Twitter" },
+    { icon: Instagram, href: "https://www.instagram.com/globalskillshift/?igsh=ZHZ1c2g5eWlhNThz&utm_source=qr",
+       label: "Instagram" },
     { icon: Facebook, href: "#", label: "Facebook" },
   ]
 
@@ -74,7 +75,7 @@ export function Footer() {
               <div className="flex items-start gap-3">
                 <Calendar className="h-5 w-5 mt-0.5 text-primary-foreground/60" />
                 <div>
-                  <div className="font-medium">Coming Soon 2025</div>
+                  <div className="font-medium">Dec 13th 2025</div>
                   <div className="text-sm text-primary-foreground/80">Beyond the Skill Summit</div>
                 </div>
               </div>
@@ -98,7 +99,7 @@ export function Footer() {
                   href="mailto:info@globalskillshift.com"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200"
                 >
-                  info@globalskillshift.com
+                  info@globalskillshift.com.ng
                 </a>
               </div>
               <div className="flex items-center gap-3">

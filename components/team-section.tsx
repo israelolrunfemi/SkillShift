@@ -18,7 +18,7 @@ image: "/images/Ebun.jpg"
 {
 name: "Olatunji Abdul Hameed",
 title: "Project Lead",
-image: "/young-african-entrepreneur.png"
+image: "/images/Hameed.jpg"
 },
 {
 name: "Abdur-Rahman Ayanleke",

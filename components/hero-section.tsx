@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Users, MapPin, Calendar, Sparkles, Star, TrendingUp } from "lucide-react"
+import { ArrowRight, Users, MapPin, Calendar, Sparkles, Star, TrendingUp, Ticket } from "lucide-react"
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -210,7 +210,7 @@ export function HeroSection() {
             style={{ animationDelay: '1.7s', animationFillMode: 'forwards' }}
           >
             {[
-              { icon: Calendar, title: "Coming Soon", subtitle: "2025", color: "blue-600", accent: "🚀" },
+              { icon: Calendar, title: "December 13th", subtitle: "2025", color: "blue-600", accent: "🚀" },
               { icon: MapPin, title: "UNILAG Campus", subtitle: "Lagos, Nigeria", color: "emerald-600", accent: "🌍" },
               { icon: Users, title: "1,000+ Attendees", subtitle: "+ 5,000 Digital Viewers", color: "purple-600", accent: "⚡" }
             ].map((item, index) => (
@@ -234,28 +234,70 @@ export function HeroSection() {
             ))}
           </div>
 
-          {/* Refined CTA Button */}
+          {/* Refined CTA Buttons */}
           <div 
             className="flex justify-center items-center mb-16 sm:mb-20 opacity-0 animate-fade-in-up px-4"
             style={{ animationDelay: '2.3s', animationFillMode: 'forwards' }}
           >
-            {/* Primary CTA - Balanced Design */}
-            <div className="relative group w-full sm:w-auto">
-              {/* Subtle outer glow */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-40 transition-all duration-700"></div>
-              
-              {/* Clean container */}
-              <div className="relative">
-                <Button className="relative w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 border-0 overflow-hidden group">
-                  {/* Subtle shimmer effect */}
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 ease-out"></div>
-                  
-                  <span className="relative flex items-center justify-center space-x-3">
-                    <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6" />
-                    <span>Join the Movement</span>
-                    <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Button>
+            <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+              {/* Primary CTA - Join the Movement */}
+              <div className="relative group w-full sm:w-auto">
+                {/* Subtle outer glow */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-40 transition-all duration-700"></div>
+                
+                {/* Clean container */}
+                <div className="relative">
+                  <Button
+                    asChild
+                    className="relative w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 border-0 overflow-hidden group"
+                  >
+                    <a
+                      href="https://chat.whatsapp.com/JKYhr6RPUKc8QHyKCMvGBq?mode=ems_copy_c"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Join the Movement on WhatsApp"
+                    >
+                      {/* Subtle shimmer effect */}
+                      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 ease-out"></div>
+                      
+                      <span className="relative flex items-center justify-center space-x-3">
+                        <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6" />
+                        <span>Join the Movement</span>
+                        <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-1" />
+                      </span>
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Secondary CTA - Register Now */}
+              <div className="relative group w-full sm:w-auto">
+                {/* Subtle outer glow */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-3xl blur-lg opacity-0 group-hover:opacity-40 transition-all duration-700"></div>
+
+                {/* Clean container */}
+                <div className="relative">
+                  <Button
+                    asChild
+                    className="relative w-full sm:w-auto bg-white text-blue-700 hover:text-blue-800 border-2 border-blue-600/30 hover:border-blue-600/50 font-bold px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl rounded-2xl shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 overflow-hidden group"
+                  >
+                    <a
+                      href="https://tix.africa/beyondtheskill"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Register for Beyond the Skill"
+                    >
+                      {/* Subtle shimmer effect */}
+                      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-blue-100/40 to-transparent transition-transform duration-1000 ease-out"></div>
+
+                      <span className="relative flex items-center justify-center space-x-3">
+                        <Ticket className="h-5 w-5 sm:h-6 sm:w-6" />
+                        <span>Register Now</span>
+                        <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-1" />
+                      </span>
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     title: "SkillShift: Beyond the Skill | Link. Learn. Leap.",
     description:
       "Join over 1,000 young minds at Africa's premier empowerment summit. Turn your skills into real opportunities.",
-    type: "website",
   },
+                                                                                                                                                                                                                                      
 }
-
+                           
 export default function RootLayout({
   children,
 }: Readonly<{

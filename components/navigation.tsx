@@ -16,8 +16,8 @@ export function Navigation() {
     setIsClient(true);
 
     const handleScroll = () => {
-      if (typeof window === 'undefined') return;
-      
+      if (typeof window === "undefined") return;
+
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 20);
 
@@ -26,11 +26,11 @@ export function Navigation() {
       const documentHeight = document.documentElement.scrollHeight;
       const scrollTop = window.scrollY;
       const trackLength = documentHeight - windowHeight;
-      const progress = Math.min(100, (scrollTop / trackLength) * 100);
+      const progress = Math.min(100, (scrollTop / (trackLength || 1)) * 100);
       setScrollProgress(progress);
 
       // Update active section based on scroll position
-      const sections = ["about", "sponsors", "testimonials", "contact"];
+      const sections = ["about", "sponsors", "team", "speakers", "testimonials", "contact"];
       const currentSection = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -45,7 +45,7 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll);
     // Call once to set initial state
     handleScroll();
-    
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -53,12 +53,12 @@ export function Navigation() {
     { label: "About", href: "#about", id: "about" },
     { label: "Sponsors", href: "#sponsors", id: "sponsors" },
     { label: "Team", href: "#team", id: "team" },
-    { label: "Contact", href: "#contact", id: "contact" },
+    { label: "Speakers", href: "#speakers", id: "speakers" },
   ];
 
   const handleSmoothScroll = (href: string) => {
-    if (typeof window === 'undefined') return;
-    
+    if (typeof window === "undefined") return;
+
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -105,22 +105,24 @@ export function Navigation() {
 
             {/* CTA Button */}
             <div className="hidden lg:block">
-              <Button className="bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-bold px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500">
-                <span className="text-sm font-extrabold tracking-wide">
-                  Join the Movement
-                </span>
-              </Button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
               <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-3 bg-white/60 backdrop-blur-md border border-gray-200/50 hover:bg-white/80 transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl"
+                asChild
+                className="bg-gradient-to-r 
+              from-gray-700 to-gray-800 hover:from-gray-600
+               hover:to-gray-700 text-white font-bold px-8 py-4 
+               rounded-2xl shadow-xl hover:shadow-2xl 
+               transform hover:scale-105 hover:-translate-y-1 transition-all duration-500"
               >
-                <Menu className="w-6 h-6 text-gray-700" />
+                <a
+                  href="https://tix.africa/beyondtheskill"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Register for Beyond the Skill"
+                >
+                  <span className="text-sm font-extrabold tracking-wide">
+                    Register
+                  </span>
+                </a>
               </Button>
             </div>
           </div>
@@ -204,29 +206,36 @@ export function Navigation() {
                   {/* Inner gradient border */}
                   <div className="absolute inset-[1px] bg-gradient-to-r from-gray-300/20 to-gray-400/20 rounded-2xl"></div>
 
-                  <Button className="relative bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-bold px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 border-0 overflow-hidden group">
-                    {/* Shimmer effect */}
-                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 ease-out"></div>
+                  <Button className="relative bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-bold px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 border-0 overflow-hidden group" asChild>
+                    <a
+                      href="https://chat.whatsapp.com/JKYhr6RPUKc8QHyKCMvGBq?mode=ems_copy_c"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Join the Movement on WhatsApp"
+                    >
+                      {/* Shimmer effect */}
+                      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 ease-out"></div>
 
-                    <span className="relative flex items-center space-x-3">
-                      <span className="text-sm font-extrabold tracking-wide">
-                        Join the Movement
+                      <span className="relative flex items-center space-x-3">
+                        <span className="text-sm font-extrabold tracking-wide">
+                          Join the Movement
+                        </span>
+                        <div className="flex space-x-1">
+                          <div
+                            className="w-1.5 h-1.5 bg-white rounded-full animate-bounce"
+                            style={{ animationDelay: "0ms" }}
+                          ></div>
+                          <div
+                            className="w-1.5 h-1.5 bg-white rounded-full animate-bounce"
+                            style={{ animationDelay: "150ms" }}
+                          ></div>
+                          <div
+                            className="w-1.5 h-1.5 bg-white rounded-full animate-bounce"
+                            style={{ animationDelay: "300ms" }}
+                          ></div>
+                        </div>
                       </span>
-                      <div className="flex space-x-1">
-                        <div
-                          className="w-1.5 h-1.5 bg-white rounded-full animate-bounce"
-                          style={{ animationDelay: "0ms" }}
-                        ></div>
-                        <div
-                          className="w-1.5 h-1.5 bg-white rounded-full animate-bounce"
-                          style={{ animationDelay: "150ms" }}
-                        ></div>
-                        <div
-                          className="w-1.5 h-1.5 bg-white rounded-full animate-bounce"
-                          style={{ animationDelay: "300ms" }}
-                        ></div>
-                      </div>
-                    </span>
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -290,9 +299,7 @@ export function Navigation() {
                   }`}
                   style={{
                     animationDelay: `${index * 100}ms`,
-                    transform: isMobileMenuOpen
-                      ? "translateY(0)"
-                      : "translateY(-20px)",
+                    transform: isMobileMenuOpen ? "translateY(0)" : "translateY(-20px)",
                     opacity: isMobileMenuOpen ? 1 : 0,
                     transition: `all 0.5s ease-out ${index * 100}ms`,
                   }}
@@ -301,9 +308,7 @@ export function Navigation() {
                     <span>{item.label}</span>
                     <div
                       className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        activeSection === item.id
-                          ? "bg-gray-600"
-                          : "bg-transparent"
+                        activeSection === item.id ? "bg-gray-600" : "bg-transparent"
                       }`}
                     ></div>
                   </div>
@@ -321,29 +326,39 @@ export function Navigation() {
                     {/* Glass morphism background */}
                     <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-gray-100/30 backdrop-blur-xl rounded-2xl border border-white/30 shadow-2xl"></div>
 
-                    <Button className="relative w-full bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-bold py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-500 border-0 overflow-hidden group">
-                      {/* Shimmer effect */}
-                      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 ease-out"></div>
+                    <Button
+                      className="relative w-full bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-bold py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-500 border-0 overflow-hidden group"
+                      asChild
+                    >
+                      <a
+                        href="https://chat.whatsapp.com/JKYhr6RPUKc8QHyKCMvGBq?mode=ems_copy_c"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Join the Movement on WhatsApp"
+                      >
+                        {/* Shimmer effect */}
+                        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 ease-out"></div>
 
-                      <span className="relative flex items-center justify-center space-x-3">
-                        <span className="text-sm font-extrabold tracking-wide">
-                          Join the Movement
+                        <span className="relative flex items-center justify-center space-x-3">
+                          <span className="text-sm font-extrabold tracking-wide">
+                            Join the Movement
+                          </span>
+                          <div className="flex space-x-1">
+                            <div
+                              className="w-1.5 h-1.5 bg-white rounded-full animate-bounce"
+                              style={{ animationDelay: "0ms" }}
+                            ></div>
+                            <div
+                              className="w-1.5 h-1.5 bg-white rounded-full animate-bounce"
+                              style={{ animationDelay: "150ms" }}
+                            ></div>
+                            <div
+                              className="w-1.5 h-1.5 bg-white rounded-full animate-bounce"
+                              style={{ animationDelay: "300ms" }}
+                            ></div>
+                          </div>
                         </span>
-                        <div className="flex space-x-1">
-                          <div
-                            className="w-1.5 h-1.5 bg-white rounded-full animate-bounce"
-                            style={{ animationDelay: "0ms" }}
-                          ></div>
-                          <div
-                            className="w-1.5 h-1.5 bg-white rounded-full animate-bounce"
-                            style={{ animationDelay: "150ms" }}
-                          ></div>
-                          <div
-                            className="w-1.5 h-1.5 bg-white rounded-full animate-bounce"
-                            style={{ animationDelay: "300ms" }}
-                          ></div>
-                        </div>
-                      </span>
+                      </a>
                     </Button>
                   </div>
                 </div>

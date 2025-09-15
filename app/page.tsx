@@ -64,6 +64,70 @@ const SponsorshipSection = dynamic(() => import("@/components/sponsorship-sectio
   )
 })
 
+const SpeakersSection = dynamic(() => import("@/components/speakers-section").then(mod => ({ default: mod.default })), {
+  ssr: false,
+  loading: () => (
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <div className="animate-pulse">
+            <div className="h-8 bg-gray-200 rounded-full w-48 mx-auto mb-6"></div>
+            <div className="h-16 bg-gray-200 rounded-lg w-80 mx-auto mb-8"></div>
+            <div className="h-4 bg-gray-200 rounded w-96 mx-auto mb-12"></div>
+            
+            {/* Featured Speaker Loading */}
+            <div className="bg-gray-100 rounded-3xl p-12 mb-12">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="h-6 bg-gray-200 rounded-full w-32 mb-4"></div>
+                  <div className="h-12 bg-gray-200 rounded-lg w-64 mb-4"></div>
+                  <div className="h-6 bg-gray-200 rounded w-48 mb-2"></div>
+                  <div className="h-4 bg-gray-200 rounded w-40 mb-6"></div>
+                  <div className="h-20 bg-gray-200 rounded-lg mb-6"></div>
+                  <div className="flex gap-2 mb-6">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="h-8 bg-gray-200 rounded-full w-20"></div>
+                    ))}
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="h-12 bg-gray-200 rounded-xl w-32"></div>
+                    <div className="h-12 bg-gray-200 rounded-xl w-28"></div>
+                  </div>
+                </div>
+                <div className="flex justify-center">
+                  <div className="w-80 h-80 bg-gray-200 rounded-3xl"></div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Other Speakers Grid Loading */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="bg-gray-100 rounded-2xl p-8">
+                  <div className="w-24 h-24 bg-gray-200 rounded-2xl mx-auto mb-4"></div>
+                  <div className="h-6 bg-gray-200 rounded w-32 mx-auto mb-2"></div>
+                  <div className="h-4 bg-gray-200 rounded w-28 mx-auto mb-1"></div>
+                  <div className="h-3 bg-gray-200 rounded w-24 mx-auto mb-4"></div>
+                  <div className="h-16 bg-gray-200 rounded mx-auto mb-4"></div>
+                  <div className="flex gap-2 justify-center mb-4">
+                    <div className="h-6 bg-gray-200 rounded-full w-16"></div>
+                    <div className="h-6 bg-gray-200 rounded-full w-20"></div>
+                  </div>
+                  <div className="flex gap-2 justify-center">
+                    {[1, 2, 3].map((j) => (
+                      <div key={j} className="w-10 h-10 bg-gray-200 rounded-xl"></div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+})
+
 const MeetTeamSection = dynamic(() => import("@/components/team-section").then(mod => ({ default: mod.MeetTeamSection })), {
   ssr: false,
   loading: () => (
@@ -81,6 +145,7 @@ const MeetTeamSection = dynamic(() => import("@/components/team-section").then(m
         </div>
       </div>
     </section>
+    
   )
 })
 
@@ -141,7 +206,15 @@ export default function HomePage() {
       
       <Suspense fallback={
         <section className="py-24 bg-white">
-          <div className="text-center animate-pulse text-xl text-gray-400">Loading Testimonials...</div>
+          <div className="text-center animate-pulse text-xl text-gray-400">Loading Speakers...</div>
+        </section>
+      }>
+        <SpeakersSection />
+      </Suspense>
+      
+      <Suspense fallback={
+        <section className="py-24 bg-white">
+          <div className="text-center animate-pulse text-xl text-gray-400">Loading Team...</div>
         </section>
       }>
         <MeetTeamSection />
