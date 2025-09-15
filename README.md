@@ -101,7 +101,3 @@ The total projected budget for the event is ₦10,000,000. Here's a detailed all
 
 This budget ensures a high-quality, impactful event while allowing for flexibility.
 
-## Contact and Next Steps
-For sponsorship inquiries, partnership discussions, or more details, reach out to the Global SkillShift team (contact information not specified in the document—please refer to official channels).
-
-This README is based on the provided "SKILLSHIFT COPY.pdf" document, summarizing its content for easy reference. For the full proposal, consult the original PDF.
