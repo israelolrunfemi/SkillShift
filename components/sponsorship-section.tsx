@@ -18,31 +18,7 @@ secondaryColor: "#64748B",
 bgColor: "bg-slate-600/5",
 borderColor: "border-slate-600/30",
 featured: true,
-benefits: [
-"Industry exclusivity (only one sponsor per sector)",
-"Premium branding (main stage, media, photo wall)",
-"Keynote speaking slot during the main plenary",
-"One-week on-campus mass marketing to 2,000+ students",
-"Featured across UNILAG media platforms and student channels",
-"Access to the attendee database for future recruitment",
-"Full media coverage (TV, radio, press, digital)",
-"VIP dinner with speakers and government officials",
-"Custom branded lounge or product activation zone",
-"Honorary award and official recognition at the event",
-"Dedicated social media campaign for your brand",
-"Post-event talent recruitment pipeline access"
-],
-},
-{
-name: "Headline Sponsors",
-subtitle: "The Pinnacle of Partnership",
-price: "₦5,000,000+",
-icon: <Crown className="w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16" />,
-color: "#475569",
-secondaryColor: "#64748B",
-bgColor: "bg-slate-600/5",
-borderColor: "border-slate-600/30",
-featured: true,
+exclusive: "Executive tier",
 benefits: [
 "Industry exclusivity (only one sponsor per sector)",
 "Premium branding (main stage, media, photo wall)",
@@ -60,7 +36,7 @@ benefits: [
 {
 name: "Gold Premium",
 subtitle: "Elite Brand Positioning",
-price: "₦2,000,000+",
+price: "₦3,000,000+",
 icon: <Award className="w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16" />,
 color: "#6B7280",
 secondaryColor: "#9CA3AF",
@@ -83,7 +59,7 @@ benefits: [
 {
 name: "Silver Executive",
 subtitle: "Strategic Brand Alliance",
-price: "₦1,000,000+",
+price: "₦1,500,000+",
 icon: <Star className="w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16" />,
 color: "#374151",
 secondaryColor: "#4B5563",
@@ -103,7 +79,7 @@ benefits: [
 {
 name: "Bronze Partner",
 subtitle: "Brand Visibility Package",
-price: "₦500,000+",
+price: "₦1,000,000",
 icon: <Shield className="w-7 h-7 sm:w-10 sm:h-10 lg:w-14 lg:h-14" />,
 color: "#64748B",
 secondaryColor: "#94A3B8",
@@ -617,17 +593,11 @@ Join us in shaping the future of African talent and innovation.
 Ready to discuss your partnership? Contact our elite partnerships team:
 </p>
 <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center">
-<a href="mailto:partnerships@skillshift.com" className="group flex items-center text-gray-300 hover:text-white transition-colors font-semibold text-sm sm:text-base">
-<div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-600/20 rounded-full flex items-center justify-center mr-3 group-hover:bg-gray-500/40 transition-colors">
-<span className="text-xs sm:text-sm">@</span>
-</div>
-partnerships@skillshift.com
-</a>
-<a href="tel:+2348123456789" className="group flex items-center text-gray-300 hover:text-white transition-colors font-semibold text-sm sm:text-base">
+<a href="tel:https://wa.link/kdi2iw" className="group flex items-center text-gray-300 hover:text-white transition-colors font-semibold text-sm sm:text-base">
 <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-600/20 rounded-full flex items-center justify-center mr-3 group-hover:bg-gray-500/40 transition-colors">
 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
 </div>
-+234 812 345 6789
++234 706 057 5952
 </a>
 </div>
 </div>
