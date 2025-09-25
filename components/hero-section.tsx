@@ -314,23 +314,26 @@ export function HeroSection() {
               
               {/* Clean container */}
               <div className="relative">
-                <Button className="relative bg-transparent border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white hover:border-orange-500 font-bold px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-0.5 group overflow-hidden">
-                    <a
-                      href="https://wa.link/kdi2iw"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Become a sponsor"
-                    ></a>
-                  {/* Subtle shimmer effect */}
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-1000 ease-out"></div>
-                  
-                  <span className="relative flex items-center space-x-2">
-                    <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
-                    <span>
-                    Become a Sponsor
-                    </span>
-                  </span>
-                </Button>
+                {/* Become a Sponsor button - fixed */}
+  <Button
+    asChild
+    className="relative bg-transparent border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white hover:border-orange-500 font-bold px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-0.5 group overflow-hidden"
+  >
+    <a
+      href="https://wa.link/kdi2iw"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Become a sponsor"
+    >
+      {/* Subtle shimmer effect */}
+      <div className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-1000 ease-out"></div>
+
+      <span className="relative flex items-center space-x-2">
+        <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
+        <span>Become a Sponsor</span>
+      </span>
+    </a>
+  </Button>
               </div>
             </div>
           </div>
