@@ -281,12 +281,6 @@ export function HeroSection() {
                     asChild
                     className="relative w-full sm:w-auto bg-white text-blue-700 hover:text-blue-800 border-2 border-blue-600/30 hover:border-blue-600/50 font-bold px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl rounded-2xl shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 overflow-hidden group"
                   >
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Register for Beyond the Skill"
-                    >
                       {/* Subtle shimmer effect */}
                       <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-blue-100/40 to-transparent transition-transform duration-1000 ease-out"></div>
 
@@ -295,7 +289,6 @@ export function HeroSection() {
                         <span>Register Now</span>
                         <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-1" />
                       </span>
-                    </a>
                   </Button>
                 </div>
               </div>
