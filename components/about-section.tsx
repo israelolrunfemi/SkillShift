@@ -2,6 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Target, Users, Lightbulb, TrendingUp, CheckCircle2 } from "lucide-react"
+import { Button } from "./ui/button"
 
 export function AboutSection() {
   const problems = [
@@ -101,7 +102,7 @@ export function AboutSection() {
           </div>
           
           <h3 className="text-4xl md:text-5xl font-bold mb-8 text-[#0A2540] leading-tight">
-            Beyond Skills: Changes That
+            Global Skill Shift: Changes That
             <span className="text-[#FF5E3A]"> Transform Lives</span>
           </h3>
           
@@ -142,9 +143,17 @@ export function AboutSection() {
 
         {/* Call to Action */}
         <div className="text-center mt-20">
-          <div className="inline-flex items-center px-8 py-4 rounded-full bg-[#FF5E3A] text-white font-bold text-lg shadow-2xl hover:shadow-[#FF5E3A]/30 hover:scale-105 transition-all duration-300 cursor-pointer group">
-            <span className="group-hover:text-[#00D1FF] transition-colors duration-300">Ready to Transform Your Future?</span>
-          </div>
+          <Button className="inline-flex items-center px-8 py-4 rounded-full bg-[#FF5E3A] text-white font-bold text-lg shadow-2xl hover:shadow-[#FF5E3A]/30 hover:scale-105 transition-all duration-300 cursor-pointer group">
+           <a
+                      href="https://chat.whatsapp.com/JKYhr6RPUKc8QHyKCMvGBq?mode=ems_copy_c"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Register for Beyond the Skill"
+                    ></a>
+            <span className="group-hover:text-[#00D1FF] transition-colors duration-300">
+              Ready to Transform Your Future?
+              </span>
+          </Button>
         </div>
       </div>
     </section>

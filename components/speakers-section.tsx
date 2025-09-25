@@ -58,9 +58,7 @@ export default function SpeakersSection() {
         title: "Digital Entrepreneur and Content creator",
         image: "/images/Gerald Umeh.jpeg",
         bio: "Digital entrepreneur and content creator specializing in online business and media production."
-      }
-    ],
-    guests: [
+      },
       {
         name: "Samuel Egube",
         title: "Deputy Chief of Staff, Lagos State / Author / Life Coach",
@@ -69,9 +67,9 @@ export default function SpeakersSection() {
       },
       {
         name: "Akinbo Olugbade",
-        title: "CEO & Founder, Kewal Technologies",
+        title: "CEO & Founder,  Kawaii Technology",
         image: "/images/Akinbo Akin Olugbade.jpg",
-        bio: "Innovative CEO and founder of Kewal Technologies, advancing technological solutions."
+        bio: "Innovative CEO and founder of  Kawaii Technology, advancing technological solutions."
       },
       {
         name: "Prof. Sunday Adebisi",
@@ -83,7 +81,7 @@ export default function SpeakersSection() {
         name: "Damilare Haroun",
         title: "Best Graduating Student, University of Lagos",
         image: "/images/Damilare.jpg",
-        bio: "Outstanding scholar and best graduating student from the University of Lagos."
+        bio: "Perfect 5.0 GPA, Outstanding scholar and best graduating student from the University of Lagos."
       },
       {
         name: "David Mark",
@@ -93,9 +91,9 @@ export default function SpeakersSection() {
       },
       {
         name: "Shokunbi Pelumi",
-        title: "Best-selling Author, AmazonKDP",
+        title: "Amazon Kdp expert",
         image: "/images/Pelumi.jpg",
-        bio: "Best-selling author on Amazon KDP, known for impactful self-published works."
+        bio: "Expert  on Amazon KDP, known for impactful self-published works."
       },
       {
         name: "Fawwaz Yahaya",
@@ -112,7 +110,7 @@ export default function SpeakersSection() {
         
         {/* Section Header */}
         <h2 className="text-5xl font-bold mb-12">
-          Meet Our <span className="text-primary">Speakers & Guests</span>
+          Meet Our <span className="text-primary">Speakers</span>
         </h2>
         
         {/* Keynote Speaker */}
@@ -140,9 +138,9 @@ export default function SpeakersSection() {
           </div>
         </div>
         
-        {/* Other Speakers */}
-        <h3 className="text-3xl font-bold mb-10">Speakers</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
+        {/* Confirmed and Proposed Speakers */}
+        <h3 className="text-3xl font-bold mb-10">Confirmed and Proposed Speakers</h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {speakersData.speakers.map((spk, idx) => (
             <div
               key={idx}
@@ -158,28 +156,6 @@ export default function SpeakersSection() {
               <h4 className="text-xl font-bold">{spk.name}</h4>
               <p className="text-primary font-medium">{spk.title}</p>
               <p className="text-gray-600 text-sm mt-4">{spk.bio}</p>
-            </div>
-          ))}
-        </div>
-        
-        {/* Special Guests */}
-        <h3 className="text-3xl font-bold mb-10">Special Guests</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {speakersData.guests.map((gst, idx) => (
-            <div
-              key={idx}
-              className="bg-gray-50 rounded-2xl p-8 shadow hover:shadow-lg transition"
-            >
-              <Image
-                src={gst.image}
-                alt={gst.name}
-                width={200}
-                height={200}
-                className="rounded-2xl mx-auto mb-6 object-cover"
-              />
-              <h4 className="text-xl font-bold">{gst.name}</h4>
-              <p className="text-primary font-medium">{gst.title}</p>
-              <p className="text-gray-600 text-sm mt-4">{gst.bio}</p>
             </div>
           ))}
         </div>

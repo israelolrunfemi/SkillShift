@@ -282,7 +282,7 @@ export function HeroSection() {
                     className="relative w-full sm:w-auto bg-white text-blue-700 hover:text-blue-800 border-2 border-blue-600/30 hover:border-blue-600/50 font-bold px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl rounded-2xl shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 overflow-hidden group"
                   >
                     <a
-                      href="https://tix.africa/beyondtheskill"
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Register for Beyond the Skill"
@@ -315,12 +315,20 @@ export function HeroSection() {
               {/* Clean container */}
               <div className="relative">
                 <Button className="relative bg-transparent border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white hover:border-orange-500 font-bold px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-0.5 group overflow-hidden">
+                    <a
+                      href="https://wa.link/kdi2iw"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Become a sponsor"
+                    ></a>
                   {/* Subtle shimmer effect */}
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-1000 ease-out"></div>
                   
                   <span className="relative flex items-center space-x-2">
                     <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
-                    <span>Become a Sponsor</span>
+                    <span>
+                    Become a Sponsor
+                    </span>
                   </span>
                 </Button>
               </div>
