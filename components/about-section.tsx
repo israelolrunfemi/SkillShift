@@ -143,17 +143,22 @@ export function AboutSection() {
 
         {/* Call to Action */}
         <div className="text-center mt-20">
-          <Button className="inline-flex items-center px-8 py-4 rounded-full bg-[#FF5E3A] text-white font-bold text-lg shadow-2xl hover:shadow-[#FF5E3A]/30 hover:scale-105 transition-all duration-300 cursor-pointer group">
-           <a
-                      href="https://chat.whatsapp.com/JKYhr6RPUKc8QHyKCMvGBq?mode=ems_copy_c"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Register for Beyond the Skill"
-                    ></a>
-            <span className="group-hover:text-[#00D1FF] transition-colors duration-300">
-              Ready to Transform Your Future?
-              </span>
-          </Button>
+          {/* Replace the affected blocks with this corrected version */}
+  <Button
+    asChild
+    className="inline-flex items-center px-8 py-4 rounded-full bg-[#FF5E3A] text-white font-bold text-lg shadow-2xl hover:shadow-[#FF5E3A]/30 hover:scale-105 transition-all duration-300 cursor-pointer group"
+  >
+    <a
+      href="https://chat.whatsapp.com/JKYhr6RPUKc8QHyKCMvGBq"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Register for Beyond the Skill"
+    >
+      <span className="group-hover:text-[#00D1FF] transition-colors duration-300">
+        Ready to Transform Your Future?
+      </span>
+    </a>
+  </Button>
         </div>
       </div>
     </section>
