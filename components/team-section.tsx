@@ -23,7 +23,7 @@ image: "/images/Hameed.jpg"
 {
 name: "Abdur-Rahman Ayanleke",
 title: "Media Team Lead",
-image: "/professional-african-man.png"
+image: "/images/Ayanleke.jpg"
 },
 {
 name: "Akeju Abisola",

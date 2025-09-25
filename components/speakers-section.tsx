@@ -19,15 +19,21 @@ export default function SpeakersSection() {
       },
       {
         name: "Ayo Akindola",
-        title: "Co Founder & CPO, PayGigFleet",
+        title: "Co Founder & CPO, Piggyvest( PocketApp)",
         image: "/images/Ayo.jpeg",
-        bio: "Co-founder and chief product officer of PayGigFleet with expertise in product strategy and fintech."
+        bio: "Co-founder and chief product officer of Piggyvest( PocketApp) with expertise in product strategy and fintech."
       },
       {
-        name: "Idris Akindlabi",
+        name: "Idris Akinlabi",
         title: "Division operations specialist at Chipper Cash",
         image: "/images/Idris.jpeg",
         bio: "Operations specialist at Chipper Cash, experienced in financial technology and division management."
+      },
+      {
+        name: "Jimoh Okoh",
+        title: "Chief Solutions Architect Huawei cloud Nigeria | Presales Engineer | Team Lead",
+        image: "/images/Jimoh.jpg",
+        bio: "Results-driven Senior Solutions Architect with extensive experience in cloud computing, software development, and enterprise solutions. Proven ability to design and implement innovative cloud solutions, drive technical presales, and lead successful project deliveries."
       },
       {
         name: "Oluftunto Okuboyejo",
