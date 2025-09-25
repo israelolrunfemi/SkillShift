@@ -9,17 +9,15 @@ export function SponsorshipSection() {
   
 const sponsorshipTiers = [
 {
-name: "Platinum Elite",
+name: "Headline Sponsors",
 subtitle: "The Pinnacle of Partnership",
-price: "₦3,000,000+",
+price: "₦5,000,000+",
 icon: <Crown className="w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16" />,
 color: "#475569",
 secondaryColor: "#64748B",
 bgColor: "bg-slate-600/5",
 borderColor: "border-slate-600/30",
 featured: true,
-exclusive: "ULTRA EXCLUSIVE",
-rarity: "Limited to 3 Partners Only",
 benefits: [
 "Industry exclusivity (only one sponsor per sector)",
 "Premium branding (main stage, media, photo wall)",
@@ -35,6 +33,30 @@ benefits: [
 "Post-event talent recruitment pipeline access"
 ],
 },
+{
+name: "Headline Sponsors",
+subtitle: "The Pinnacle of Partnership",
+price: "₦5,000,000+",
+icon: <Crown className="w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16" />,
+color: "#475569",
+secondaryColor: "#64748B",
+bgColor: "bg-slate-600/5",
+borderColor: "border-slate-600/30",
+featured: true,
+benefits: [
+"Industry exclusivity (only one sponsor per sector)",
+"Premium branding (main stage, media, photo wall)",
+"Keynote speaking slot during the main plenary",
+"One-week on-campus mass marketing to 2,000+ students",
+"Featured across UNILAG media platforms and student channels",
+"Access to the attendee database for future recruitment",
+"Full media coverage (TV, radio, press, digital)",
+"VIP dinner with speakers and government officials",
+"Custom branded lounge or product activation zone",
+"Honorary award and official recognition at the event",
+],
+},
+
 {
 name: "Gold Premium",
 subtitle: "Elite Brand Positioning",
@@ -100,7 +122,7 @@ benefits: [
 {
 name: "Supporter Elite",
 subtitle: "Community Champion",
-price: "₦100,000 - ₦499,999",
+price: "₦100,000 - ₦1,000,000",
 icon: <Heart className="w-7 h-7 sm:w-10 sm:h-10 lg:w-14 lg:h-14" />,
 color: "#71717A",
 secondaryColor: "#A1A1AA",
