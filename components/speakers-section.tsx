@@ -14,7 +14,7 @@ export default function SpeakersSection() {
        {
         name: "Samuel Egube",
         title: "Deputy Chief of Staff, Lagos State / Author / Life Coach",
-        image: "/images/Samuel.jpeg",
+        image: "/images/Samuel Egube.jpeg",
         bio: "Seasoned government administrator, author, and life coach contributing to Lagos State governance and personal development."
       },
             {
