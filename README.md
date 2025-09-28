@@ -1,5 +1,10 @@
 # Global SkillShift Event README
 
+## Installation
+1. Clone the repo
+2. Run `npm install`
+3. Run `npm run dev`
+
 ## Overview
 Global SkillShift is an annual movement and event series aimed at empowering young people across Africa by transforming their skills—or even their uncertainties—into tangible opportunities. The flagship event, **Beyond the Skill**, is a one-day gathering targeting over 1,000 physical attendees, including students, creatives, aspiring entrepreneurs, tech learners, freelancers, and those still figuring out their path in a rapidly evolving world.
 

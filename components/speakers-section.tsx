@@ -18,7 +18,7 @@ export default function SpeakersSection() {
         bio: "Seasoned government administrator, author, and life coach contributing to Lagos State governance and personal development."
       },
             {
-        name: "Akinbo Akin-Olugbade",
+        name: "Engr. Akinbo Akin Olugbade",
         title: "CEO & Founder,  Kawaii Technology",
         image: "/images/Akinbo Akin Olugbade.jpg",
         bio: "Innovative CEO and founder of  Kawaii Technology, advancing technological solutions."
@@ -36,7 +36,7 @@ export default function SpeakersSection() {
         bio: "Dedicated founder and CEO of the FABE International Foundation focused on international development and education."
       },
       {
-        name: "Ayo Akindola",
+        name: "Ayo Akinola",
         title: "Co-Founder & CPO, PocketApp (PiggyVest Group)",
         image: "/images/Ayo.jpeg",
         bio: "Ayo Akinola is the Co-Founder and Chief Product Officer of PocketApp (a product by PiggyVest), with deep expertise in product strategy, technology, and fintech innovation."
@@ -54,7 +54,7 @@ export default function SpeakersSection() {
         bio: "Results-driven Senior Solutions Architect with extensive experience in cloud computing, software development, and enterprise solutions. Proven ability to design and implement innovative cloud solutions, drive technical presales, and lead successful project deliveries."
       },
       {
-        name: "Oluftunto Okuboyejo",
+        name: "Olufunto Okuboyejo",
         title: "Head, Digital Marketing / IT - First Ally Capital",
         image: "/images/Oluftunto Okuboyejo.jpeg",
         bio: "Head of digital marketing and IT at First Ally Capital, driving digital strategies and technology initiatives."
@@ -73,9 +73,9 @@ export default function SpeakersSection() {
       },
       {
         name: "Akinlami Praise",
-        title: "Founder, Profitly Consulting / Leading CRM Marketing Expert",
+        title: "Founder, Profitify Consulting / Leading CPA Marketing Expert",
         image: "/images/Praise.jpg",
-        bio: "Founder of Profitly Consulting and leading expert in CPA marketing strategies."
+        bio: "Founder of Profitify Consulting and leading expert in CPA marketing strategies."
       },
       {
         name: "Gerald Umeh",
@@ -121,7 +121,7 @@ export default function SpeakersSection() {
         </h2>
         
         {/* Confirmed and Proposed Speakers */}
-        <h3 className="text-3xl font-bold mb-10">Confirmed and Proposed Speakers</h3>
+        <h3 className="text-3xl font-bold mb-10">Proposed and Confirmed Speakers</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {speakersData.speakers.map((spk, idx) => (
             <div
