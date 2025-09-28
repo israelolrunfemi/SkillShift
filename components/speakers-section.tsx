@@ -4,13 +4,31 @@ import Image from "next/image"
 
 export default function SpeakersSection() {
   const speakersData = {
-    keynote: {
+    speakers: [
+      {
       name: "Prof. Folashade Ogunsola",
       title: "Vice Chancellor, University of Lagos",
       image: "/images/folashade.jpg",
       bio: "Renowned academic leader and medical microbiologist serving as the Vice Chancellor of the University of Lagos."
     },
-    speakers: [
+       {
+        name: "Samuel Egube",
+        title: "Deputy Chief of Staff, Lagos State / Author / Life Coach",
+        image: "/images/Samuel.jpeg",
+        bio: "Seasoned government administrator, author, and life coach contributing to Lagos State governance and personal development."
+      },
+            {
+        name: "Akinbo Akin-Olugbade",
+        title: "CEO & Founder,  Kawaii Technology",
+        image: "/images/Akinbo Akin Olugbade.jpg",
+        bio: "Innovative CEO and founder of  Kawaii Technology, advancing technological solutions."
+      },
+      {
+        name: "Prof. Sunday Adebisi",
+        title: "Chair, Professor of Entrepreneurship Studies & Director ESD, UNILAG",
+        image: "/images/Sunday.jpeg",
+        bio: "Distinguished professor of entrepreneurship studies and director of the Entrepreneurship and Skills Development Centre at UNILAG."
+      },
       {
         name: "Temitope Okunnu",
         title: "Founder and CEO, FABE International Foundation",
@@ -19,14 +37,14 @@ export default function SpeakersSection() {
       },
       {
         name: "Ayo Akindola",
-        title: "Co Founder & CPO, Piggyvest( PocketApp)",
+        title: "Co-Founder & CPO, PocketApp (PiggyVest Group)",
         image: "/images/Ayo.jpeg",
-        bio: "Co-founder and chief product officer of Piggyvest( PocketApp) with expertise in product strategy and fintech."
+        bio: "Ayo Akinola is the Co-Founder and Chief Product Officer of PocketApp (a product by PiggyVest), with deep expertise in product strategy, technology, and fintech innovation."
       },
       {
         name: "Idris Akinlabi",
         title: "Division operations specialist at Chipper Cash",
-        image: "/images/Idris.jpeg",
+        image: "/images/Akinlabi 2.jpg",
         bio: "Operations specialist at Chipper Cash, experienced in financial technology and division management."
       },
       {
@@ -57,7 +75,7 @@ export default function SpeakersSection() {
         name: "Akinlami Praise",
         title: "Founder, Profitly Consulting / Leading CRM Marketing Expert",
         image: "/images/Praise.jpg",
-        bio: "Founder of Profitly Consulting and leading expert in CRM marketing strategies."
+        bio: "Founder of Profitly Consulting and leading expert in CPA marketing strategies."
       },
       {
         name: "Gerald Umeh",
@@ -65,24 +83,7 @@ export default function SpeakersSection() {
         image: "/images/Gerald Umeh.jpeg",
         bio: "Digital entrepreneur and content creator specializing in online business and media production."
       },
-      {
-        name: "Samuel Egube",
-        title: "Deputy Chief of Staff, Lagos State / Author / Life Coach",
-        image: "/images/Samuel.jpeg",
-        bio: "Seasoned government administrator, author, and life coach contributing to Lagos State governance and personal development."
-      },
-      {
-        name: "Akinbo Olugbade",
-        title: "CEO & Founder,  Kawaii Technology",
-        image: "/images/Akinbo Akin Olugbade.jpg",
-        bio: "Innovative CEO and founder of  Kawaii Technology, advancing technological solutions."
-      },
-      {
-        name: "Prof. Sunday Adebisi",
-        title: "Chair, Professor of Entrepreneurship Studies & Director ESD, UNILAG",
-        image: "/images/Sunday.jpeg",
-        bio: "Distinguished professor of entrepreneurship studies and director of the Entrepreneurship and Skills Development Centre at UNILAG."
-      },
+
       {
         name: "Damilare Haroun",
         title: "Best Graduating Student, University of Lagos",
@@ -91,9 +92,9 @@ export default function SpeakersSection() {
       },
       {
         name: "David Mark",
-        title: "Back-end & Data Engineer, Terrace, UGH",
+        title: "Back-end & Data Engineer, Terrace, USA.",
         image: "/images/Davidmark.jpg",
-        bio: "Skilled back-end and data engineer at Terrace, with expertise in software and data systems."
+        bio: "Skilled back-end and data engineer at Terrace, with expertise in software and data systems."
       },
       {
         name: "Shokunbi Pelumi",
@@ -118,31 +119,6 @@ export default function SpeakersSection() {
         <h2 className="text-5xl font-bold mb-12">
           Meet Our <span className="text-primary">Speakers</span>
         </h2>
-        
-        {/* Keynote Speaker */}
-        <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl p-12 mb-20 shadow-lg">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-left">
-              <h3 className="text-3xl font-bold text-primary mb-4">
-                Keynote Speaker
-              </h3>
-              <h4 className="text-2xl font-semibold">{speakersData.keynote.name}</h4>
-              <p className="text-lg text-muted-foreground mb-6">
-                {speakersData.keynote.title}
-              </p>
-              <p className="text-base text-gray-600">{speakersData.keynote.bio}</p>
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src={speakersData.keynote.image}
-                alt={speakersData.keynote.name}
-                width={300}
-                height={300}
-                className="rounded-3xl object-cover shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
         
         {/* Confirmed and Proposed Speakers */}
         <h3 className="text-3xl font-bold mb-10">Confirmed and Proposed Speakers</h3>
