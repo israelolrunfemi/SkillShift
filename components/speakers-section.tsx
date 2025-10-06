@@ -50,7 +50,7 @@ export default function SpeakersSection() {
       {
         name: "Jimoh Okoh",
         title: "Chief Solutions Architect Huawei cloud Nigeria | Presales Engineer | Team Lead",
-        image: "/images/Jimoh.jpg",
+        image: "/images/JimohOkoh.jpg",
         bio: "Results-driven Senior Solutions Architect with extensive experience in cloud computing, software development, and enterprise solutions. Proven ability to design and implement innovative cloud solutions, drive technical presales, and lead successful project deliveries."
       },
       {

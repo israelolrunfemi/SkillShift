@@ -211,7 +211,7 @@ export function HeroSection() {
           >
             {[
               { icon: Calendar, title: "December 13th", subtitle: "2025", color: "blue-600", accent: "🚀" },
-              { icon: MapPin, title: "UNILAG Campus", subtitle: "Lagos, Nigeria", color: "emerald-600", accent: "🌍" },
+              { icon: MapPin, title: "UNILAG Campus", subtitle: "Tayo Aderinokun Hall, Beside Unilag Guest House, University of Lagos", color: "emerald-600", accent: "🌍" },
               { icon: Users, title: "1,000+ Attendees", subtitle: "+ 5,000 Digital Viewers", color: "purple-600", accent: "⚡" }
             ].map((item, index) => (
               <div 
