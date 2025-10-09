@@ -315,7 +315,7 @@ export function HeroSection() {
     className="relative bg-transparent border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white hover:border-orange-500 font-bold px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-0.5 group overflow-hidden"
   >
     <a
-      href="https://wa.link/kdi2iw"
+      href="https://tally.so/r/mKdWzX"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Become a sponsor"
